@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+:root {
+  --primary-color: rgb(153, 0, 255);
+  --secondary-color: rgb(42, 42, 50);
+  --bg-color: rgb(34, 34, 41);
+  --winner: rgb(27, 65, 255);
+  --loser: rgb(255, 24, 58);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+.selection-container {
+  max-width: 700px;
+  padding: 40px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.selection-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.weapon-choices-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.weapon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.weapon-choices-container .weapon-container:hover {
+  transform: scale(1.1);
+}
+
+div.weapon-choices-container .weapon-container:hover > span {
+  color: var(--primary-color);
+}
+
+.weapon-img {
+  margin-bottom: 20px;
+}
+
+.weapon-img.scissors {
+  transform: rotate(180deg);
+}
+
+.weapon-title {
+  font-size: 1.15em;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.sides-container {
+  margin: auto;
+  width: 60vw;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  flex-shrink: 1;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.sides-container :first-child {
+  border-radius: 10px 0 0 10px;
+}
+.sides-container :last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+.side-container {
+  width: 100%;
+  padding: 50px 5px;
+  color: white;
+  transition: all 0.4s;
+  border-radius: 10px;
+}
+
+.side-container.winner {
+  background-color: var(--winner);
+  transition: all 0.4s;
+}
+
+.side-container.loser {
+  background-color: var(--loser);
+  flex-shrink: 2;
+  transition: all 0.4s;
+}
+
+.side-container.draw {
+  background-color: var(--primary-color);
+}
+
+.battle-result {
+  text-align: center;
+  color: white;
+  font-size: 2em;
+}
